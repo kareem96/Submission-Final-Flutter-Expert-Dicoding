@@ -4,6 +4,7 @@ import 'package:core/styles/text_style.dart';
 import 'package:core/utils/constant.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/widgets/tab_pager.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/presentation/bloc/now_playing/movie_now_playing_bloc.dart';
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
               onPressed: () {
-                /*FirebaseCrashlytics.instance.crash();*/
+                FirebaseCrashlytics.instance.crash();
                 Navigator.pushNamed(context, SearchPage.routeName);
               },
               icon: const Icon(Icons.search)),
