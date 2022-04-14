@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:core/domain/entities/tv/tv.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:search/use_case/search_tv.dart';
+import 'package:core/domain/usecase/tv/search_tv.dart';
 
 part 'tv_search_event.dart';
 

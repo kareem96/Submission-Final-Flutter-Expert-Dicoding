@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:core/domain/entities/tv/tv.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tv/usecase/get_tv_top_rated.dart';
+import 'package:core/domain/usecase/tv/get_tv_top_rated.dart';
 
 part 'tv_top_rated_event.dart';
 

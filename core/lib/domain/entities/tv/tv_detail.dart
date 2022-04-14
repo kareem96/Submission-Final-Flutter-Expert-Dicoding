@@ -1,7 +1,3 @@
-
-
-
-
 import 'package:core/domain/entities/tv/season.dart';
 import 'package:equatable/equatable.dart';
 import '../genre.dart';
@@ -54,25 +50,25 @@ class TvDetail extends Equatable {
   @override
   // TODO: implement props
   List<Object?> get props => [
-    seasons,
-    genres,
-    adult,
-    backdropPath,
-    homepage,
-    id,
-    inProduction,
-    name,
-    numberOfEpisodes,
-    numberOfSeasons,
-    originalLanguage,
-    originalName,
-    overview,
-    popularity,
-    posterPath,
-    status,
-    tagline,
-    type,
-    voteAverage,
-    voteCount,
-  ];
+        seasons,
+        genres,
+        adult,
+        backdropPath,
+        homepage,
+        id,
+        inProduction,
+        name,
+        numberOfEpisodes,
+        numberOfSeasons,
+        originalLanguage,
+        originalName,
+        overview,
+        popularity,
+        posterPath,
+        status,
+        tagline,
+        type,
+        voteAverage,
+        voteCount,
+      ];
 }

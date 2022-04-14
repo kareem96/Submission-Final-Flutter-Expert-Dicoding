@@ -11,7 +11,7 @@ import 'package:dartz/dartz.dart';
 
 import '../../domain/entities/movie.dart';
 import '../../domain/entities/movie_detail.dart';
-import '../../domain/repositories/movie_respository.dart';
+import '../../domain/repositories/movie_repository.dart';
 import '../datasources/local/local_data_source.dart';
 import '../model/movie_table.dart';
 

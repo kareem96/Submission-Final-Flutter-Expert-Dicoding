@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:core/domain/entities/tv/tv.dart';
+import 'package:core/domain/usecase/tv/get_tv_airing_today.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tv/usecase/get_tv_airing_today.dart';
 
 part 'tv_airing_today_event.dart';
 

@@ -7,6 +7,12 @@ import 'dart:async' as _i5;
 import 'package:core/domain/entities/tv/tv.dart' as _i9;
 import 'package:core/domain/entities/tv/tv_detail.dart' as _i7;
 import 'package:core/domain/repositories/tv_repository.dart' as _i2;
+import 'package:core/domain/usecase/tv/get_recommendations_tv.dart' as _i13;
+import 'package:core/domain/usecase/tv/get_tv_airing_today.dart' as _i10;
+import 'package:core/domain/usecase/tv/get_tv_detail.dart' as _i4;
+import 'package:core/domain/usecase/tv/get_tv_on_the_air.dart' as _i11;
+import 'package:core/domain/usecase/tv/get_tv_popular.dart' as _i8;
+import 'package:core/domain/usecase/tv/get_tv_top_rated.dart' as _i12;
 import 'package:core/domain/usecase/tv/get_watchlist_status_tv.dart' as _i15;
 import 'package:core/domain/usecase/tv/get_watchlist_tv.dart' as _i14;
 import 'package:core/domain/usecase/tv/remove_watchlist_tv.dart' as _i16;
@@ -14,12 +20,6 @@ import 'package:core/domain/usecase/tv/save_watchlist_tv.dart' as _i17;
 import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:tv/usecase/get_recommendations_tv.dart' as _i13;
-import 'package:tv/usecase/get_tv_airing_today.dart' as _i10;
-import 'package:tv/usecase/get_tv_detail.dart' as _i4;
-import 'package:tv/usecase/get_tv_on_the_air.dart' as _i11;
-import 'package:tv/usecase/get_tv_popular.dart' as _i8;
-import 'package:tv/usecase/get_tv_top_rated.dart' as _i12;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

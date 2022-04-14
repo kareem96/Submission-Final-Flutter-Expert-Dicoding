@@ -1,10 +1,8 @@
-
 import 'package:equatable/equatable.dart';
 
 import '../../domain/entities/movie.dart';
 
 class MovieModel extends Equatable {
-
   MovieModel({
     required this.adult,
     required this.backdropPath,
@@ -36,38 +34,38 @@ class MovieModel extends Equatable {
   final int voteCount;
 
   factory MovieModel.fromJson(Map<String, dynamic> json) => MovieModel(
-    adult: json["adult"],
-    backdropPath: json["backdrop_path"],
-    genreIds: List<int>.from(json["genre_ids"].map((x) => x)),
-    id: json["id"],
-    originalTitle: json["original_title"],
-    overview: json["overview"],
-    popularity: json["popularity"].toDouble(),
-    posterPath: json["poster_path"],
-    releaseDate: json["release_date"],
-    title: json["title"],
-    video: json["video"],
-    voteAverage: json["vote_average"].toDouble(),
-    voteCount: json["vote_count"],
-  );
+        adult: json["adult"],
+        backdropPath: json["backdrop_path"],
+        genreIds: List<int>.from(json["genre_ids"].map((x) => x)),
+        id: json["id"],
+        originalTitle: json["original_title"],
+        overview: json["overview"],
+        popularity: json["popularity"].toDouble(),
+        posterPath: json["poster_path"],
+        releaseDate: json["release_date"],
+        title: json["title"],
+        video: json["video"],
+        voteAverage: json["vote_average"].toDouble(),
+        voteCount: json["vote_count"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "adult": adult,
-    "backdrop_path": backdropPath,
-    "genre_ids": List<dynamic>.from(genreIds.map((x) => x)),
-    "id": id,
-    "original_title": originalTitle,
-    "overview": overview,
-    "popularity": popularity,
-    "poster_path": posterPath,
-    "release_date": releaseDate,
-    "title": title,
-    "video": video,
-    "vote_average": voteAverage,
-    "vote_count": voteCount,
-  };
+        "adult": adult,
+        "backdrop_path": backdropPath,
+        "genre_ids": List<dynamic>.from(genreIds.map((x) => x)),
+        "id": id,
+        "original_title": originalTitle,
+        "overview": overview,
+        "popularity": popularity,
+        "poster_path": posterPath,
+        "release_date": releaseDate,
+        "title": title,
+        "video": video,
+        "vote_average": voteAverage,
+        "vote_count": voteCount,
+      };
 
-  Movie toEntity(){
+  Movie toEntity() {
     return Movie(
         adult: adult,
         backdropPath: backdropPath,
@@ -81,26 +79,23 @@ class MovieModel extends Equatable {
         title: title,
         video: video,
         voteAverage: voteAverage,
-        voteCount: voteCount
-    );
+        voteCount: voteCount);
   }
 
   @override
-  List<Object?> get props =>[
-    adult,
-    backdropPath,
-    genreIds,
-    id,
-    originalTitle,
-    overview,
-    popularity,
-    posterPath,
-    releaseDate,
-    title,
-    video,
-    voteAverage,
-    voteCount,
-  ];
+  List<Object?> get props => [
+        adult,
+        backdropPath,
+        genreIds,
+        id,
+        originalTitle,
+        overview,
+        popularity,
+        posterPath,
+        releaseDate,
+        title,
+        video,
+        voteAverage,
+        voteCount,
+      ];
 }
-
-

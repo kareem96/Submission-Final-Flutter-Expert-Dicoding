@@ -1,6 +1,4 @@
-
-
-import '../../../../../tv/lib/usecase/get_tv_detail.dart';
+import 'package:core/domain/usecase/tv/get_tv_detail.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -8,10 +6,10 @@ import 'package:mockito/mockito.dart';
 import '../../../dummy_data/dummy_objects.dart';
 import '../../../helpers/test_helper.mocks.dart';
 
-void main(){
+void main() {
   late GetTvDetail getTvDetail;
   late MockTvRepository mockTvRepository;
-  setUp((){
+  setUp(() {
     mockTvRepository = MockTvRepository();
     getTvDetail = GetTvDetail(mockTvRepository);
   });
@@ -21,8 +19,10 @@ void main(){
     ///arrange
     when(mockTvRepository.getDetailTv(tId))
         .thenAnswer((_) async => Right(testTvDetail));
+
     ///act
     final result = await getTvDetail.execute(tId);
+
     ///assert
     expect(result, Right(testTvDetail));
   });

@@ -6,7 +6,12 @@ import 'dart:async' as _i5;
 
 import 'package:core/domain/entities/movie.dart' as _i9;
 import 'package:core/domain/entities/movie_detail.dart' as _i7;
-import 'package:core/domain/repositories/movie_respository.dart' as _i2;
+import 'package:core/domain/repositories/movie_repository.dart' as _i2;
+import 'package:core/domain/usecase/get_detail_movie.dart' as _i4;
+import 'package:core/domain/usecase/get_now_playing_movies.dart' as _i10;
+import 'package:core/domain/usecase/get_popular_movies.dart' as _i8;
+import 'package:core/domain/usecase/get_recommended_movie.dart' as _i12;
+import 'package:core/domain/usecase/get_top_rated_movies.dart' as _i11;
 import 'package:core/domain/usecase/get_watchlist_movies.dart' as _i13;
 import 'package:core/domain/usecase/get_watchlist_status.dart' as _i14;
 import 'package:core/domain/usecase/remove_watchlist.dart' as _i16;
@@ -14,11 +19,6 @@ import 'package:core/domain/usecase/save_watchlist.dart' as _i15;
 import 'package:core/utils/failure.dart' as _i6;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:movie/usecase/get_detail_movie.dart' as _i4;
-import 'package:movie/usecase/get_now_playing_movies.dart' as _i10;
-import 'package:movie/usecase/get_popular_movies.dart' as _i8;
-import 'package:movie/usecase/get_recommended_movie.dart' as _i12;
-import 'package:movie/usecase/get_top_rated_movies.dart' as _i11;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

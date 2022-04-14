@@ -43,7 +43,6 @@ class _SearchTvPageState extends State<SearchTvPage> {
               'Search Result',
               style: Heading6,
             ),
-
             BlocBuilder<TvSearchBloc, TvSearchState>(builder: (context, state) {
               if (state is TvSearchLoading) {
                 return const Center(

@@ -1,7 +1,4 @@
-
-
-
-import 'package:movie/usecase/get_detail_movie.dart';
+import 'package:core/domain/usecase/get_detail_movie.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -9,11 +6,11 @@ import 'package:mockito/mockito.dart';
 import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/test_helper.mocks.dart';
 
-void main(){
+void main() {
   late GetMovieDetail getMovieDetail;
   late MockMovieRepository mockMovieRepository;
 
-  setUp((){
+  setUp(() {
     mockMovieRepository = MockMovieRepository();
     getMovieDetail = GetMovieDetail(mockMovieRepository);
   });
@@ -23,8 +20,10 @@ void main(){
     ///arrange
     when(mockMovieRepository.getDetailMovie(tId))
         .thenAnswer((_) async => Right(testMovieDetail));
+
     ///act
     final result = await getMovieDetail.execute(tId);
+
     ///assert
     expect(result, Right(testMovieDetail));
   });

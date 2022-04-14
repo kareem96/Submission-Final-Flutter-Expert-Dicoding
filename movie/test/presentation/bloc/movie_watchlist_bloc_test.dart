@@ -32,9 +32,7 @@ void main() {
     expect(movieWatchListBloc.state, MovieWatchListInitial());
   });
 
-  group(
-    'get watchlist movies test cases',
-    () {
+  group('get watchlist movies test cases', () {
       blocTest<MovieWatchListBloc, MovieWatchListState>(
         'should emit Loading state and then HasData state when watchlist data successfully retrieved',
         build: () {
@@ -84,9 +82,7 @@ void main() {
     },
   );
 
-  group(
-    'get watchlist status test cases',
-    () {
+  group('get watchlist status test cases', () {
       blocTest<MovieWatchListBloc, MovieWatchListState>(
         'should be true when the watchlist status is also true',
         build: () {
@@ -123,9 +119,7 @@ void main() {
     },
   );
 
-  group(
-    'add and remove watchlist test cases',
-    () {
+  group('add and remove watchlist test cases', () {
       blocTest<MovieWatchListBloc, MovieWatchListState>(
         'should update watchlist status when adding watchlist succeeded',
         build: () {

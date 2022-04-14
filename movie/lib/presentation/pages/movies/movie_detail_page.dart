@@ -10,7 +10,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:movie/presentation/bloc/detail/movie_detail_bloc.dart';
 import 'package:movie/presentation/bloc/movie_recommendation/movie_recommendation_bloc.dart';
-import 'package:provider/provider.dart';
 import '../../bloc/movie_watchlist/movie_watchlist_bloc.dart';
 
 class MovieDetailPage extends StatefulWidget {
@@ -195,7 +194,7 @@ class _ContentDetailsState extends State<ContentDetails> {
                       onTap: () {
                         Navigator.pushReplacementNamed(
                             context, MovieDetailPage.routeName,
-                            arguments: recommendation);
+                            arguments: recommendation.id);
                       },
                       child: ClipRRect(
                         borderRadius:

@@ -11,7 +11,6 @@ import 'package:movie/presentation/bloc/now_playing/movie_now_playing_bloc.dart'
 import 'package:movie/presentation/bloc/popular/movie_popular_bloc.dart';
 import 'package:movie/presentation/pages/movies/popular_movies_page.dart';
 import 'package:movie/presentation/pages/movies/top_rated_movies_page.dart';
-import 'package:provider/provider.dart';
 import 'package:search/presentation/page/search/search_page.dart';
 import 'package:tv/presentation/pages/tv/tv_page.dart';
 import '../../bloc/top_rated/movie_top_rated_bloc.dart';
@@ -87,7 +86,6 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
               onPressed: () {
-                FirebaseCrashlytics.instance.crash();
                 Navigator.pushNamed(context, SearchPage.routeName);
               },
               icon: const Icon(Icons.search)),

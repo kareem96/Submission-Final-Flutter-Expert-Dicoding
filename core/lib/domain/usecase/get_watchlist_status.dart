@@ -1,13 +1,11 @@
+import '../repositories/movie_repository.dart';
 
-
-import '../repositories/movie_respository.dart';
-
-class GetWatchListStatus{
+class GetWatchListStatus {
   final MovieRepository repository;
 
   GetWatchListStatus(this.repository);
 
-  Future<bool> execute(int id)async{
+  Future<bool> execute(int id) async {
     return repository.isAddedToWatchlist(id);
   }
 }

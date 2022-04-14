@@ -1,10 +1,9 @@
 import 'dart:async';
 
 import 'package:core/domain/entities/movie.dart';
+import 'package:core/domain/usecase/get_now_playing_movies.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../usecase/get_now_playing_movies.dart';
 
 part 'movie_now_playing_state.dart';
 

@@ -7,7 +7,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:search/presentation/bloc/search_bloc.dart';
 import 'package:search/presentation/bloc/search_event.dart';
-import 'package:search/use_case/search_movies.dart';
+import 'package:core/domain/usecase/search_movies.dart';
 
 import 'search_bloc_test.mocks.dart';
 

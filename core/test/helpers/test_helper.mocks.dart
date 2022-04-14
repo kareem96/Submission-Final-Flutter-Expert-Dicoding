@@ -22,7 +22,7 @@ import 'package:core/domain/entities/movie.dart' as _i9;
 import 'package:core/domain/entities/movie_detail.dart' as _i10;
 import 'package:core/domain/entities/tv/tv.dart' as _i13;
 import 'package:core/domain/entities/tv/tv_detail.dart' as _i12;
-import 'package:core/domain/repositories/movie_respository.dart' as _i6;
+import 'package:core/domain/repositories/movie_repository.dart' as _i6;
 import 'package:core/domain/repositories/tv_repository.dart' as _i11;
 import 'package:core/utils/failure.dart' as _i8;
 import 'package:core/utils/network_info.dart' as _i24;

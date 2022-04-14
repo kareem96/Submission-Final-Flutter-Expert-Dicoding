@@ -4,7 +4,7 @@ import 'package:core/domain/entities/movie.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie/usecase/get_recommended_movie.dart';
+import 'package:core/domain/usecase/get_recommended_movie.dart';
 
 part 'movie_recommendation_state.dart';
 

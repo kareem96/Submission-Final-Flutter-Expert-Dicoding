@@ -62,7 +62,7 @@ class _WatchlistTvPageState extends State<WatchlistTvPage> with RouteAware {
             },
           );
         } else if (state is TvWatchListEmpty) {
-          return Center(
+          return const Center(
             child: Text("Watchlist Empty"),
           );
         } else {

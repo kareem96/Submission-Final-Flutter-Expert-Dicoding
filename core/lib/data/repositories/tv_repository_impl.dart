@@ -1,6 +1,3 @@
-
-
-
 import 'dart:async';
 import 'dart:io';
 
@@ -16,123 +13,118 @@ import '../datasources/local/tv/local_data_source_tv.dart';
 import '../datasources/remote/remote_data_source.dart';
 import '../model/tv/tv_table.dart';
 
-class TvRepositoryImpl implements TvRepository{
+class TvRepositoryImpl implements TvRepository {
   final MovieRemoteDataSource remoteDataSource;
   final NetworkInfo networkInfo;
 
   final TvLocalDataSource tvLocalDataSource;
-  TvRepositoryImpl({
 
-    required this.remoteDataSource,
-    required this.tvLocalDataSource,
-    required this.networkInfo});
-
-
-
+  TvRepositoryImpl(
+      {required this.remoteDataSource,
+      required this.tvLocalDataSource,
+      required this.networkInfo});
 
   @override
   Future<Either<Failure, TvDetail>> getDetailTv(int id) async {
     // TODO: implement getDetailTv
-    try{
+    try {
       final result = await remoteDataSource.getDetailTv(id);
       return Right(result.toEntity());
-    }on ServerException{
+    } on ServerException {
       return Left(ServerFailure(''));
-    }on SocketException{
+    } on SocketException {
       return Left(ConnectionFailure('Failed connect to network'));
     }
-
   }
 
   @override
-  Future<Either<Failure, List<Tv>>> getTvAiringToday() async{
+  Future<Either<Failure, List<Tv>>> getTvAiringToday() async {
     // TODO: implement getTvAiringToday
-    try{
+    try {
       final result = await remoteDataSource.getTvAiringToday();
       return Right(result.map((e) => e.toEntity()).toList());
-    }on ServerException{
+    } on ServerException {
       return Left(ServerFailure(''));
-    }on SocketException{
+    } on SocketException {
       return Left(ConnectionFailure('Failed to connect the network'));
     }
   }
 
   @override
-  Future<Either<Failure, List<Tv>>> getTvOnTheAir() async{
+  Future<Either<Failure, List<Tv>>> getTvOnTheAir() async {
     // TODO: implement getTvOnTheAir
-    try{
+    try {
       final result = await remoteDataSource.getTvOnTheAir();
       return Right(result.map((e) => e.toEntity()).toList());
-    }on ServerException{
+    } on ServerException {
       return Left(ServerFailure(''));
-    }on SocketException{
+    } on SocketException {
       return Left(ConnectionFailure('Failed to connect the network'));
     }
   }
-
-
-
 
   @override
   Future<Either<Failure, List<Tv>>> getTvPopular() async {
     // TODO: implement getTvPopular
-    try{
+    try {
       final result = await remoteDataSource.getTvPopular();
       return Right(result.map((e) => e.toEntity()).toList());
-    }on ServerException{
+    } on ServerException {
       return Left(ServerFailure(''));
-    }on SocketException{
+    } on SocketException {
       return Left(ConnectionFailure('Failed to connect the network'));
     }
   }
 
   @override
-  Future<Either<Failure, List<Tv>>> getTvTopRated() async{
+  Future<Either<Failure, List<Tv>>> getTvTopRated() async {
     // TODO: implement getTvTopRated
-    try{
+    try {
       final result = await remoteDataSource.getTvTopRated();
       return Right(result.map((e) => e.toEntity()).toList());
-    }on ServerException{
+    } on ServerException {
       return Left(ServerFailure(''));
-    }on SocketException{
+    } on SocketException {
       return Left(ConnectionFailure('Failed to connect the network'));
     }
   }
 
   @override
-  Future<Either<Failure, List<Tv>>> getWatchlistTv() async{
+  Future<Either<Failure, List<Tv>>> getWatchlistTv() async {
     // TODO: implement getWatchlistTv
     final result = await tvLocalDataSource.getWatchlistTv();
     return Right(result.map((e) => e.toEntity()).toList());
   }
 
   @override
-  Future<bool> isAddedToWatchlistTv(int id) async{
+  Future<bool> isAddedToWatchlistTv(int id) async {
     // TODO: implement isAddedToWatchlistTv
     final result = await tvLocalDataSource.getTvById(id);
     return result != null;
   }
 
   @override
-  Future<Either<Failure, String>> removeWatchlistTv(TvDetail tvDetail) async{
+  Future<Either<Failure, String>> removeWatchlistTv(TvDetail tvDetail) async {
     // TODO: implement removeWatchlistTv
-    try{
-      final result = await tvLocalDataSource.removeWatchlistTv(TvTable.fromEntity(tvDetail));
+    try {
+      final result = await tvLocalDataSource
+          .removeWatchlistTv(TvTable.fromEntity(tvDetail));
       return Right(result);
-    }on DataBaseException catch(e){
+    } on DataBaseException catch (e) {
       return Left(DataBaseFailure(e.message));
     }
   }
 
   @override
-  Future<Either<Failure, String>> saveWatchlistTv(TvDetail tvDetail) async{
+  Future<Either<Failure, String>> saveWatchlistTv(TvDetail tvDetail) async {
     // TODO: implement saveWatchlistTv
-    try{
-      final result = await tvLocalDataSource.insertWatchlistTv(TvTable.fromEntity(tvDetail));
+    try {
+      final result = await tvLocalDataSource
+          .insertWatchlistTv(TvTable.fromEntity(tvDetail));
       return Right(result);
-    }on DataBaseException catch (e){
+    } on DataBaseException catch (e) {
       return Left(DataBaseFailure(e.message));
-    }catch(e){
+    } catch (e) {
       throw e;
     }
   }
@@ -140,29 +132,26 @@ class TvRepositoryImpl implements TvRepository{
   @override
   Future<Either<Failure, List<Tv>>> searchTv(String query) async {
     // TODO: implement searchTv
-    try{
+    try {
       final result = await remoteDataSource.searchTv(query);
       return Right(result.map((e) => e.toEntity()).toList());
-    }on ServerException{
+    } on ServerException {
       return Left(ServerFailure(''));
-    }on SocketException{
+    } on SocketException {
       return Left(ConnectionFailure('Failed to connect the network'));
     }
   }
 
-
-
   @override
-  Future<Either<Failure, List<Tv>>> getRecommendationsTv(int id) async{
+  Future<Either<Failure, List<Tv>>> getRecommendationsTv(int id) async {
     // TODO: implement getRecommendationsTv
-    try{
+    try {
       final result = await remoteDataSource.getTvRecommendations(id);
       return Right(result.map((e) => e.toEntity()).toList());
-    }on ServerFailure{
+    } on ServerFailure {
       return Left(ServerFailure(''));
-    }on SocketException{
+    } on SocketException {
       return Left(ConnectionFailure('Failed connect to network'));
     }
   }
-
 }

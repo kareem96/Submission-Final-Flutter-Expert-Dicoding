@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:core/domain/entities/movie_detail.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie/usecase/get_detail_movie.dart';
+import 'package:core/domain/usecase/get_detail_movie.dart';
 
 part 'movie_detail_event.dart';
 

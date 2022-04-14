@@ -15,21 +15,17 @@ class ScrollableSheet extends StatefulWidget {
 }
 
 class _ScrollableSheetState extends State<ScrollableSheet> {
-
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery
-        .of(context)
-        .size
-        .width;
+    final screenWidth = MediaQuery.of(context).size.width;
     return Stack(
       children: [
         CachedNetworkImage(
           imageUrl: widget.background,
           width: screenWidth,
-          placeholder: (context, url) =>
-          const Center(
-            child: CircularProgressIndicator(),),
+          placeholder: (context, url) => const Center(
+            child: CircularProgressIndicator(),
+          ),
           errorWidget: (context, url, error) => const Icon(Icons.error),
         ),
         Container(
@@ -70,9 +66,7 @@ class _ScrollableSheetState extends State<ScrollableSheet> {
                 ),
               );
             },
-            // initialChildSize: 0.5,
             minChildSize: 0.25,
-            // maxChildSize: 1.0,
           ),
         ),
         Padding(

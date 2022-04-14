@@ -1,9 +1,3 @@
-
-
-
-
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 ///colors
@@ -13,7 +7,6 @@ const Color kBlue = Color(0xFF003566);
 const Color kYellow = Color(0xFFffc300);
 const Color Grey = Color(0xFF4b5358);
 const Color kGrey = Color(0xFF303030);
-
 
 const kColorScheme = ColorScheme(
     primary: kYellow,
@@ -28,5 +21,4 @@ const kColorScheme = ColorScheme(
     onSurface: Colors.white,
     onBackground: Colors.white,
     onError: Colors.white,
-    brightness: Brightness.dark
-);
+    brightness: Brightness.dark);

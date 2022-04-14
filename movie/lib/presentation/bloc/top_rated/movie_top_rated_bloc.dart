@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:core/domain/entities/movie.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie/usecase/get_top_rated_movies.dart';
+import 'package:core/domain/usecase/get_top_rated_movies.dart';
 
 part 'movie_top_rated_state.dart';
 
