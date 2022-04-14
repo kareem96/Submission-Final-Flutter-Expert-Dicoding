@@ -1,0 +1,178 @@
+{
+  "adult": false,
+  "backdrop_path": "/path.jpg",
+  "created_by": [
+    {
+      "id": 1,
+      "credit_id": "623ca00ad1a89300885f6b46",
+      "name": "Name",
+      "gender": 2,
+      "profile_path": null
+    },
+    {
+      "id": 1,
+      "credit_id": "623c9fe4a7e363008bde5e74",
+      "name": "Name",
+      "gender": 2,
+      "profile_path": null
+    }
+  ],
+  "episode_run_time": [
+    1
+  ],
+  "first_air_date": "2022-03-24",
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action"
+    },
+    {
+      "id": 1,
+      "name": "Fantasy"
+    }
+  ],
+  "homepage": "https://google.com",
+  "id": 1,
+  "in_production": true,
+  "languages": [
+    "eo",
+    "ug",
+    "af",
+    "en",
+    "pt"
+  ],
+  "last_air_date": "2022-03-31",
+  "last_episode_to_air": {
+    "air_date": "2022-03-31",
+    "episode_number": 2,
+    "id": 1,
+    "name": "Name",
+    "overview": "Overview",
+    "production_code": "",
+    "season_number": 1,
+    "still_path": "/path.jpg",
+    "vote_average": 5.0,
+    "vote_count": 6
+  },
+  "name": "Name",
+  "next_episode_to_air": {
+    "air_date": "2022-04-07",
+    "episode_number": 3,
+    "id": 1,
+    "name": "Name",
+    "overview": "Overview",
+    "production_code": "",
+    "season_number": 1,
+    "still_path": null,
+    "vote_average": 0.0,
+    "vote_count": 0
+  },
+  "networks": [
+    {
+      "name": "Name",
+      "id": 1,
+      "logo_path": "/path.jpg",
+      "origin_country": "US"
+    }
+  ],
+  "number_of_episodes": 1,
+  "number_of_seasons": 1,
+  "origin_country": [
+    "US"
+  ],
+  "original_language": "en",
+  "original_name": "Original Name",
+  "overview": "Overview",
+  "popularity": 1.0,
+  "poster_path": "/path.jpg",
+  "production_companies": [
+    {
+      "id": 7671,
+      "logo_path": "/path.jpg",
+      "name": "Name",
+      "origin_country": "US"
+    },
+    {
+      "id": 115160,
+      "logo_path": null,
+      "name": "Name",
+      "origin_country": ""
+    },
+    {
+      "id": 115161,
+      "logo_path": null,
+      "name": "Name",
+      "origin_country": ""
+    },
+    {
+      "id": 48856,
+      "logo_path": "/path.jpg",
+      "name": "Name",
+      "origin_country": "US"
+    },
+    {
+      "id": 4343,
+      "logo_path": "/path.jpg",
+      "name": "Name",
+      "origin_country": "US"
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "Name"
+    }
+  ],
+  "seasons": [
+    {
+      "air_date": "2022-03-24",
+      "episode_count": 2,
+      "id": 284981,
+      "name": "Name",
+      "overview": "",
+      "poster_path": null,
+      "season_number": 0
+    },
+    {
+      "air_date": "2022-03-24",
+      "episode_count": 9,
+      "id": 105701,
+      "name": "Name",
+      "overview": "",
+      "poster_path": "/path.jpg",
+      "season_number": 1
+    }
+  ],
+  "spoken_languages": [
+    {
+      "english_name": "Esperanto",
+      "iso_639_1": "eo",
+      "name": "Esperanto"
+    },
+    {
+      "english_name": "Uighur",
+      "iso_639_1": "ug",
+      "name": ""
+    },
+    {
+      "english_name": "Afrikaans",
+      "iso_639_1": "af",
+      "name": "Afrikaans"
+    },
+    {
+      "english_name": "English",
+      "iso_639_1": "en",
+      "name": "English"
+    },
+    {
+      "english_name": "Portuguese",
+      "iso_639_1": "pt",
+      "name": "Português"
+    }
+  ],
+  "status": "Status",
+  "tagline": "Tagline",
+  "type": "Type",
+  "vote_average": 1.0,
+  "vote_count": 1
+}

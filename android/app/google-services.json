@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "14938354913",
+    "project_id": "nontonkuy-76b90",
+    "storage_bucket": "nontonkuy-76b90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14938354913:android:623fbacb0abbcc2eaab3a0",
+        "android_client_info": {
+          "package_name": "com.kareemdev.app_clean_architecture_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14938354913-msbp01orh7m6g9p9msqj9b9v7vevo37j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXOJaPSd-rJZE-CVe6iRtOE_bbI2urhvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14938354913-msbp01orh7m6g9p9msqj9b9v7vevo37j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

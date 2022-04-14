@@ -1,0 +1,30 @@
+{
+  "dates": {
+    "maximum": "2021-05-23",
+    "minimum": "2021-04-05"
+  },
+  "page": 1,
+  "results": [
+    {
+      "backdrop_path": "/path.jpg",
+      "first_air_date": "2021-09-03",
+      "genre_ids": [
+        1
+      ],
+      "id": 1,
+      "name": "Name",
+      "origin_country": [
+        "US"
+      ],
+      "original_language": "en",
+      "original_name": "The D'Amelio Show",
+      "overview": "Overview",
+      "popularity": 1.0,
+      "poster_path": "/path.jpg",
+      "vote_average": 1.0,
+      "vote_count": 1
+    }
+  ],
+  "total_pages": 47,
+  "total_results": 940
+}
