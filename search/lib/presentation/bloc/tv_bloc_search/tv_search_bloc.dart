@@ -9,24 +9,22 @@ part 'tv_search_event.dart';
 
 part 'tv_search_state.dart';
 
-
-class TvSearchBloc extends Bloc<TvSearchEvent, TvSearchState>{
+class TvSearchBloc extends Bloc<TvSearchEvent, TvSearchState> {
   final SearchTv _searchTv;
-  TvSearchBloc(this._searchTv) : super(TvSearchInitial()){
+
+  TvSearchBloc(this._searchTv) : super(TvSearchInitial()) {
     on<OnQueryTvChange>(_onQueryTvChange);
   }
 
-
-  FutureOr<void> _onQueryTvChange(OnQueryTvChange event, Emitter<TvSearchState> emit) async{
+  FutureOr<void> _onQueryTvChange(OnQueryTvChange event, Emitter<TvSearchState> emit) async {
     final query = event.query;
     emit(TvSearchEmpty());
     final result = await _searchTv.execute(query);
 
-    result.fold((failure){
+    result.fold((failure) {
       emit(TvSearchError(failure.message));
-    }, (success){
-      success.isEmpty
-          ? emit(TvSearchEmpty()) : emit(TvSearchHasData(success));
+    }, (success) {
+      success.isEmpty ? emit(TvSearchEmpty()) : emit(TvSearchHasData(success));
     });
   }
 }
